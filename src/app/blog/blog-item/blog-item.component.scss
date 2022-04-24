@@ -1,0 +1,39 @@
+.blog-item-wrapper{
+    img {
+        max-height: 10em;
+        padding-bottom: 1em;
+        padding-top: 0.5em;
+    }
+
+    h2{
+        margin-bottom: 0;
+    }
+    span {
+        font-style: italic;
+    }
+    p {
+        margin-top: 1em;
+    }
+
+    .date {
+        text-align: right;
+    }
+    
+    h1, p, a {
+        font-size: 1.2em !important;
+
+    }
+
+    max-width: 70em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+
+    @media screen and (max-width: 720px) {
+        margin-bottom: 1em;
+        img {
+           width: 100%;
+        }
+      }
+    
+}

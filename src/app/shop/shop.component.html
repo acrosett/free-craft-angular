@@ -1,0 +1,43 @@
+<div class="shop-wrapper">
+  <div>
+    <mat-form-field>
+      <mat-label>Ton pseudo Minecraft</mat-label>
+      <span #trigger>
+        <input [disabled]="!checked" matInput (input)="onSearchChange($event.target.value)" placeholder="" value="">
+      </span>
+      <mat-progress-bar *ngIf="progress" color="primary" class="example-spinner" mode="buffer"></mat-progress-bar>
+      <p class="error" *ngIf="responseStatusDto == null && responseStatusDto !== undefined">Ce pseudo n'existe pas sur
+        le serveur</p>
+      <p class="success" *ngIf="responseStatusDto?.lastLogin">Dernière connexion : {{responseStatusDto.lastLogin}}</p>
+    </mat-form-field>
+  </div>
+    <div *ngIf=!checked matRipple [matRippleCentered]="true" [matRippleTrigger]="trigger" class="trigger margin-div">
+      <mat-checkbox color="primary" [(ngModel)]="checked" class="example-margin">J'ai pris connaissance de la <a
+          href="/faq">FAQ</a> et j'accepte les <a href="/eula">conditions d'utilisation</a> du serveur.</mat-checkbox>
+  </div>
+  <div class="margin-div" *ngIf=checked>
+    <mat-checkbox color="primary" [(ngModel)]="checked" class="example-margin">J'ai pris connaissance de la <a
+        href="/faq">FAQ</a> et j'accepte les <a href="/eula">conditions d'utilisation</a> du serveur.</mat-checkbox>
+  </div>
+  <div>
+    <app-shop-item [class]="(item.id == PORTAL_ID ? 'portal' : '') + (item.id == MEMBERSHIP_ID ? ' member' : '') + (item.product == CREATEUR_PRODUCT || item.product == ARCHITECTE_PRODUCT  ? ' small' : '') + (item.product == ENTREPRISE_PRODUCT || item.product == MAITRE_PRODUCT  ? ' big' : '')" *ngFor="let item of items" [disable]="!checked" [product]="item.product"
+      [member_contents]="item.member_contents" [id]="item.id" [info]="item.info" [title]="item.title" [subtitle]="item.subtitle"
+      [responseStatusDto]="responseStatusDto" [reduction]="item.reduction" [contents]="item.contents" [button]="item.button" [img]="item.img"
+      [price]="item.price"></app-shop-item>
+  </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!-- <form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" > -->
+<!-- <form #userlogin = "ngForm" >
+  <input type = "text" name = "emailid" placeholder = "emailid" ngModel>
+  <br/>
+  <input type = "password" name = "passwd" placeholder = "passwd" ngModel>
+  <br/>
+  <input type = "submit" value = "submit">
+</form>
+
+<button (click)="clickButton()">Run</button> -->

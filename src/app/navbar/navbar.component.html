@@ -1,0 +1,17 @@
+<div #wrapper class="navbar-wrapper">
+    <img [ngClass]="router.url.replace('/','').substring(0, 4) === 'blog' ? '' : 'hidden'" src="assets/img/bannerfire.webp">
+    <img [ngClass]="router.url.replace('/','').substring(0, 4) === 'home' ? '' : 'hidden'" src="assets/img/bannerterre.webp">
+ 
+    <img [ngClass]="router.url.replace('/','').substring(0, 4) === 'shop' ? '' : 'hidden'" src="assets/img/bannereau.webp">
+    <img [ngClass]="router.url.replace('/','').substring(0, 4) === 'canc' ? '' : 'hidden'" src="assets/img/bannereau.webp">
+    <img [ngClass]="router.url.replace('/','').substring(0, 3) === 'faq' ? '' : 'hidden'" src="assets/img/bannerair.webp">
+    <img [ngClass]="router.url.replace('/','').substring(0, 4) === 'eula' ? '' : 'hidden'" src="assets/img/bannerair.webp">
+    <img [ngClass]="router.url.replace('/','').substring(0, 4) === 'priv' ? '' : 'hidden'" src="assets/img/bannerair.webp">
+
+<nav [ngClass]="router.url.replace('/','').substring(0, 4).replace('#','')" #navbar id="navbar" class="navbar">
+    <a routerLink="/faq" routerLinkActive="active">Faq</a>
+    <a routerLink="/home" routerLinkActive="active">Accueil</a>
+    <a routerLink="/blog" routerLinkActive="active">Blog</a>
+    <a routerLink="/shop" routerLinkActive="active">Shop</a><!--  -->
+</nav>
+</div>

@@ -1,0 +1,63 @@
+.example-card {
+    height: 100%;
+    max-width: 20em;
+    display: inline-block;
+    text-align: left;
+
+    .img-div{
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .reduction{
+      opacity: 0.4;
+      position: absolute;
+      top: 3.9em;
+      left: 1.6em;
+      font-size: 5em;
+    }
+
+
+
+    .member_content{
+        color: rgb(60, 96, 255);
+        font-weight: bold;
+    }
+
+    .member_content_crossed {
+        color: gray;
+        opacity: 0.5;
+        text-decoration: line-through;
+    }
+    margin: 0.672em;
+    margin-bottom: 2em;
+  }
+
+  mat-card img{
+    object-fit: cover; /*this makes the image in src fit to the size specified below*/
+    max-width: 97%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  }
+
+  mat-card-actions, mat-card-content {
+      font-size: 1.11em;
+      text-align: center;
+  }
+
+  mat-icon {
+    margin-left: auto;
+    font-size: 1.45em;
+    opacity: 0.2;
+      a {
+          text-decoration: unset;
+          color: unset;
+      }
+  }
+
+  mat-card-actions {
+      font-size: 1.11em;
+      button {
+        font-size: 1em;
+        margin-bottom: .5em;
+      }
+
+  }

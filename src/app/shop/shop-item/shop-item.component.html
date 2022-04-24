@@ -1,0 +1,42 @@
+<!-- <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Deviens membre</mat-card-title>
+      <mat-card-subtitle>Soutien ton serveur favori</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src='/assets/img/membre.png'>
+    <mat-card-content>
+      <p> &#8226; Accèdes aux commandes /home et /spawn </p>
+      <p>  &#8226; Rejoins même quand le serveur est plein</p>
+      <p>  &#8226; Channel de chat exclusif</p>
+     
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">S'abonner</button>
+      <p><b>1.99€ par mois</b></p>
+    </mat-card-actions>
+  </mat-card>  -->
+  <mat-card [id]="id" class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>{{title}}</mat-card-title>      
+      <mat-icon aria-hidden="false" aria-label="info icon"><a target="_blank" [href]="info">info_outline</a></mat-icon>
+      <mat-card-subtitle>{{subtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <div class="img-div">
+    <img mat-card-image [src]='img'>
+    </div>
+    <mat-card-content>
+      <span class="reduction">{{reduction}}</span>
+      <p *ngFor="let content of contents">{{content}}</p>
+      <div class="member_content" *ngIf="responseStatusDto?.member" >
+      <p *ngFor="let mcontent of member_contents">{{mcontent}}</p>    
+      </div>
+      <div class="member_content_crossed" *ngIf="!responseStatusDto?.member" >
+        <p *ngFor="let mcontent of member_contents">{{mcontent}}</p>    
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button  [disabled]="(responseStatusDto == null || responseStatusDto === undefined || (product == membreProduct) && responseStatusDto?.member) || disable || internalDisable" (click)="click()" mat-raised-button color="primary">{{button}}</button>
+      <p *ngIf="(responseStatusDto != null && responseStatusDto !== undefined)"><b>{{price}}</b></p>
+    </mat-card-actions>
+  </mat-card> 

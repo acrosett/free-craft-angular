@@ -1,0 +1,8 @@
+<div class="blog-wrapper">
+    <div *ngIf="article">
+        <app-blog-post [article]="article"></app-blog-post>
+    </div>
+    <div *ngIf="!article">
+    <app-blog-item *ngFor="let item of items" [id]="item.id" [date]="item.date"  [author]="item.author" [title]="item.title" [subtitle]="item.subtitle"[img]="item.img"></app-blog-item>
+    </div>
+</div>

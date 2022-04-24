@@ -1,0 +1,16 @@
+.privacy_wrapper{
+    text-align: center;
+    padding: 5em;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 2em;
+    font-size: 1em;
+
+    @media screen and (max-width: 720px) {
+        padding-top: 4em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+        text-align: center;
+      }
+}

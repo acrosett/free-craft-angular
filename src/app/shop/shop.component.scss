@@ -1,0 +1,119 @@
+.shop-wrapper {
+    text-align: center;
+    padding: 7em;
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+
+    
+    .example-spinner {
+      position: relative;
+      top: 1em;
+    }
+
+    .error {
+      color: maroon;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .trigger {
+      width: fit-content;
+      padding-left: 0.5em;
+      padding-right: 0.5em;      
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .margin-div {
+      margin-bottom: 1em;
+    }
+
+    .error, .success {
+      font-size: 0.76em;
+      position: absolute;
+      top: 3em;
+    }
+
+    
+  ::ng-deep app-shop-item:nth-child(1) {
+      
+    > mat-card{
+
+        // margin-left: 30%;
+        // margin-right: 30%;
+    }
+  } 
+
+  mat-form-field {
+    width: 13.45em;
+    font-size: 1.5em;
+    padding-bottom: 0em;
+  }
+
+  mat-checkbox{
+    font-size: 0.8em;
+    a {
+      text-decoration: none;
+    }
+  }
+  ::ng-deep .mat-checkbox-layout {
+
+  }
+
+  .member {
+    ::ng-deep {
+      img {
+            padding-top: 0.8em;
+            padding-bottom: 0.685em;
+        }
+        button {
+          
+          margin-top: 0.65em;
+      }      
+
+    }
+  }
+
+  
+ .portal {
+    ::ng-deep {
+        p {
+            padding-bottom: 0.002em;
+        }
+    }
+  }
+
+  .big{
+    ::ng-deep {
+    .reduction{
+      color: lightgray;
+    }
+  }
+  }
+
+  .small{
+    ::ng-deep {
+    .reduction{
+      color: lightgray;
+    }
+  }
+  }
+    
+  @media screen and (max-width: 720px) {
+   
+    padding: 1em;
+    padding-top: 4em;
+
+    .trigger {
+      max-width: 100%;
+      width: unset;
+    }
+    ::ng-deep .mat-checkbox-label {
+      width: 90%;
+    }
+  }
+
+}

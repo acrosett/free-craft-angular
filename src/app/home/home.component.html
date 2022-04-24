@@ -1,0 +1,53 @@
+<div #wrapper class="home-wrapper">
+        <div class="specs">
+            <h1>Serveur Minecraft Java Edition</h1>
+            <!-- googleoff: snippet -->
+            <h2>Type : <span class="grey">Survie, Economie, Free Build</span></h2>
+            <h2>Version : <span class="grey">1.16.5</span></h2>
+            <h2>IP : <span (click)="copyMessage('Adresse copiée !')" class="vert pointer">free-craft.fr</span></h2>
+            <h2>Joueurs connectés : <span class="vert">{{infoServeur?.players?.online}}</span> / {{infoServeur?.players?.max}}</h2>
+            <h2>Difficulté : <span class="orange">hard</span></h2>
+            <h2 class="violet"><a href="https://discord.com/invite/tCQMKRrbRX"
+                    target="_blank">https://discord.com/invite/tCQMKRrbRX</a></h2>
+            <!-- googleon: snippet -->
+            </div>
+        <div class="images">
+            <swiper
+            [slidesPerView]="1"
+            [spaceBetween]="0"
+            [navigation]="true"
+            [speed]="1500"
+            [autoplay]="{delay: 4000}"
+            (swiper)="onSwiper($event)"
+            (slideChange)="onSlideChange()"
+        >
+            <ng-template swiperSlide>
+                <img src='/assets/img/base.webp'>
+                <p>Créer ta base où tu veux</p>
+            </ng-template>
+            <ng-template swiperSlide>
+                <img src='/assets/img/market.webp'>
+                <p>Monte ton echoppe et vend tes items</p>
+            </ng-template>
+        <ng-template swiperSlide>
+            <img src='/assets/img/building.webp'>
+            <p>Construit les plus beaux bâtiments</p>
+            </ng-template>
+            <ng-template swiperSlide>
+                <img src='/assets/img/house.webp'>
+                <p>Vend les aux autres joueurs</p>
+            </ng-template>
+            <ng-template swiperSlide>
+                <img src='/assets/img/tax.webp'>
+                <p>Taxe tes visiteurs</p>
+            </ng-template>
+            <ng-template swiperSlide>
+                <img src='/assets/img/banque.webp'>
+                <p>Place ton argent</p>
+            </ng-template>
+            </swiper>
+        </div>
+    <div>
+
+
+</div>

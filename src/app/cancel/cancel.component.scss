@@ -1,0 +1,97 @@
+.cancel-wrapper {
+    text-align: center;
+    padding: 7em;
+    padding-top: 5em;
+    height: 55.5vh;
+    
+    .example-spinner {
+      position: relative;
+      top: 1em;
+    }
+
+    .info {
+        max-width: 50em;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(160, 101, 30);
+        p {
+            padding-bottom: 1em;
+        }
+    }
+
+    .warning {
+        p:nth-child(1) {
+        font-size: 1.2em;
+        }
+        max-width: 50em;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgb(122, 143, 30);
+     
+        padding-bottom: 1em;
+        
+    }
+
+
+
+    .error {
+      color: maroon;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .trigger {
+      width: fit-content;
+      padding-left: 0.5em;
+      padding-right: 0.5em;      
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .margin-div {
+      margin-bottom: 1em;
+    }
+
+    .error, .success {
+      font-size: 0.76em;
+      position: absolute;
+      top: 3em;
+    }
+
+    
+    button {
+      font-size: 1em;
+      margin-bottom: .5em;
+    }
+
+    
+  ::ng-deep app-shop-item:nth-child(1) {
+      
+    > mat-card{
+
+        // margin-left: 30%;
+        // margin-right: 30%;
+    }
+  } 
+
+  mat-form-field {
+    width: 13.45em;
+    font-size: 1.5em;
+    padding-bottom: 0em;
+  }
+
+  mat-checkbox{
+    font-size: 0.8em;
+    a {
+      text-decoration: none;
+    }
+  }
+  @media screen and (max-width: 720px) {
+   
+    padding: 1em;
+    padding-top: 4em;
+
+  }
+}

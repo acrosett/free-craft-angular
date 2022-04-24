@@ -1,0 +1,28 @@
+<div class="cancel-wrapper">
+    <div>
+      <mat-form-field>
+        <mat-label>Ton pseudo Minecraft</mat-label>
+        <span #trigger>
+          <input matInput [(ngModel)]="textInput" (input)="onSearchChange($event.target.value)" placeholder="" value="">
+        </span>
+        <mat-progress-bar *ngIf="progress" color="primary" class="example-spinner" mode="buffer"></mat-progress-bar>
+        <p class="error" *ngIf="responseStatusDto == null && responseStatusDto !== undefined">Ce pseudo n'existe pas sur
+          le serveur</p>
+        <p class="success" *ngIf="responseStatusDto?.lastLogin && responseStatusDto?.member">Dernière connexion : {{responseStatusDto.lastLogin}}</p>
+        <p class="error" *ngIf="responseStatusDto && !responseStatusDto.member">Ce pseudo n'est pas membre</p>
+      </mat-form-field>
+      <br/>
+      <br/>
+      <div>
+        <button  [disabled]="(responseStatusDto == null || responseStatusDto === undefined || !responseStatusDto?.unlocked) || internalDisable || (responseStatusDto && !responseStatusDto.member)" (click)="click()" mat-raised-button color="primary">Annuler l'abonnement</button>
+      </div>
+      <br/>
+        <div class="info" *ngIf="!((responseStatusDto != null && responseStatusDto !== undefined) && !responseStatusDto?.unlocked)">
+      <p>INFO : Pour que ce service fonctionne il faut que tu aies préalablement tapé la commande /stopmembership dans le chat du serveur minecraft. Si tu ne peux pas accéder au serveur minecraft, contacte un administrateur.</p>
+      <p><a href="/faq#signaler">Comment signaler un problème ?</a></p>
+      </div>
+      <div class="warning" *ngIf="(responseStatusDto != null && responseStatusDto !== undefined) && !responseStatusDto?.unlocked">
+        <p>INFO : Pour que ce service fonctionne il faut que tu aies préalablement tapé la commande /stopmembership dans le chat du serveur minecraft. Si tu ne peux pas accéder au serveur minecraft, contacte un administrateur.</p>
+        <p><a href="/faq#signaler">Comment signaler un problème ?</a></p>
+        </div>
+    </div>

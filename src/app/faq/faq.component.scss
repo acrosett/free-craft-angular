@@ -1,0 +1,30 @@
+
+
+.faq-wrapper {
+
+    padding-top: 7em;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 5em;
+
+    mat-form-field {
+        width: 100%;
+        font-size: 1.5em;
+        padding-bottom: 1em;
+      }
+
+    h1 {
+        font-size: 2em;
+
+    }
+
+    @media screen and (max-width: 720px) {
+        padding-top: 4em;
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1em;
+        text-align: center;
+      }
+
+
+}

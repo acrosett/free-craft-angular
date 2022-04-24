@@ -1,0 +1,137 @@
+.navbar-wrapper{
+
+
+
+    height: 14vh;
+    background-color: #cfcfcf;
+
+    img {
+        transition:opacity 0.3s linear;
+                opacity: 1;
+                position: absolute;
+                left: 0;
+    }
+
+
+      
+    .hidden {
+       
+        opacity: 0;
+    }
+
+    text-align: center;
+    img{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .home {
+        background-color: #031101;
+    a{
+        color: #cfcfcf;
+        &.active {
+            background-color: #195008;
+            color: white;
+            }
+    }
+    }
+
+    .shop, .canc {
+        background-color: #092948;
+    a{
+        color: #cfcfcf;
+        &.active {
+            background-color: #1071b7;
+            color: white;
+            }
+    }
+    }
+
+    .blog {
+        background-color: #261013;
+    a{
+        color: #cfcfcf;
+        &.active {
+            background-color: #b0450b;
+            color: white;
+            }
+    }
+    }
+
+    .faq, .eula, .priv {
+        background-color: #4d493b;
+    a{
+        color: #cfcfcf;
+        &.active {
+            background-color: #d8cba0;
+            color: white;
+            }
+    }
+    }
+
+.navbar {
+
+	/* Black background color */
+	position: fixed;
+
+    width: 100vw;
+
+	/* Make it stick/fixed */
+	/* Stay on top */
+	/* Full width */
+	//transition: top 0.3s;
+	/* Transition effect when sliding down (and up) */
+	display: flex;
+    justify-content: center;
+
+    z-index: 2;
+    
+    // :nth-child(2) {
+    //     border-left: solid 1px grey;
+    //     border-right: solid 1px grey;
+    // }
+
+    a{
+        transition:background-color 0.3s;
+        height: 1em;
+        padding: 0em;
+        padding-top: 0.45em;
+        font-size: 2.5em;
+        font-family: fantasy;
+        float: left;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        width: 33.33%;
+
+
+
+
+
+    }
+    
+
+}
+
+@media screen and (max-width: 600px) {
+    height: unset;
+
+    img {
+      width: 100%;
+      top: 0px;
+      }
+
+      .navbar {
+        font-size: 0.9em;
+        a {
+            padding-left: 0.4em;
+            padding-right: 0.4em;
+        }
+        //top: 0px !important;
+        //position: absolute !important;
+      }
+  }
+
+
+}
+

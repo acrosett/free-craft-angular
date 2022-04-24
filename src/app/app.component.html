@@ -1,0 +1,7 @@
+<header><app-navbar></app-navbar></header>
+<main [@routeAnimations]="getRouterOutletState(o)" (@routeAnimations.start)="captureStartEvent('start')" (@routeAnimations.done)="captureDoneEvent('done')" >
+    <router-outlet #o="outlet"></router-outlet>
+  </main>
+  <footer #footer class="footer" id="footer">
+    © 2021 Copyright: free-craft.fr - <a target="_blank" href="/eula">Conditions Générales d’Utilisation</a> - <a target="_blank" href="/privacy">Politique de confidentialité</a> - contact@free-craft.fr 
+  </footer>

@@ -1,0 +1,16 @@
+<div class="faq-item-wrapper">
+<a class="anchor" [id]="id"></a>
+<mat-expansion-panel #panel (opened)="placeAnchor()">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>{{title}}</h3>
+      </mat-panel-title>
+      <mat-panel-description>
+        <i>{{summary}}</i>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p class="content">{{content}}</p>
+    <br *ngIf="links.length > 0"/>
+    <p class="links" *ngIf="links.length > 0"><span class="voir-aussi">Voir aussi : </span><span *ngFor="let link of links; let i = index"><a (click)="switchpanel(id,link.link)" [target]="link.link.includes('http') ? '_blank' : '_self'" [href]="link.link.includes('http') ? link.link : 'faq#'+link.link">{{link.title}}</a><span *ngIf="(i+1) < links.length">, </span></span></p>
+  </mat-expansion-panel>
+</div>

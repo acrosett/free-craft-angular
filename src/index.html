@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex"> 
+  <meta name="googlebot" content="noindex">
+  <!--SEO-->
+  <title>Free-craft - Serveur Minecraft</title>
+  <meta name="description" content="Free-craft, un serveur survie sans limites. Profite d'une experience java edition en difficulté hard. Créer ta base où tu veux, monte ton echoppe et vend tes items. Construit les plus beaux bâtiments, vend les aux autres joueurs. Serveur free build, rejoins nous dès maintenant !">
+  <base href="/">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+</head>
+<body class="mat-typography">
+  <app-root></app-root>
+  <div id="cookieconsent"></div>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+  <script>
+    window.cookieconsent.initialise({
+      container: document.getElementById("cookieconsent"),
+      palette:{
+       popup: {background: "#333"},
+       button: {background: "#ddd"},
+      },
+      revokable: true,
+      onStatusChange: function(status) {
+       console.log(this.hasConsented() ?
+        'enable cookies' : 'disable cookies');
+      },
+      "position": "bottom",
+      "theme": "classic",
+      "domain": "https://free-craft.fr/",
+      "secure": true,
+      "content": {
+        "message": "En utilisant nos services, vous acceptez nos conditions d'utilisation et notre politique de confidentialité.",
+        "dismiss": 'Compris !',
+        "link": 'En savoir plus',
+        "href": '/eula',
+        "close": '&#x274c;',
+        "policy": 'Conditions d’Utilisation',
+        "target": '_blank'
+        },
+        "revokable": false
+     });</script>
+</body>
+</html>
+

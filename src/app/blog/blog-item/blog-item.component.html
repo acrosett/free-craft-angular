@@ -1,0 +1,10 @@
+<mat-card class="blog-item-wrapper">
+    <img [src]="'/assets/img/blog/'+id + '.webp'">
+    <h2>{{title}}</h2>
+    <span>Par {{author}}</span><br/>
+
+
+    <p>{{subtitle}}</p>
+    <a [href]="'/blog/'+id">Lire la suite</a>
+    <div class="date">{{date}}</div>
+</mat-card>
